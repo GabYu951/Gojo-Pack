@@ -17,8 +17,7 @@ const path = require('path');
 const jimp = require("jimp");
 
 let backgrounds = [
-  "https://i.imgur.com/MnAwD8U.jpg",
-  "https://i.imgur.com/tSkuyIu.jpg"
+  "https://i.imgur.com/ctpVvot.jpg",
 ];
 let fontlink = 'https://drive.google.com/u/0/uc?id=1ZwFqYB-x6S9MjPfYm3t3SP1joohGl4iw&export=download';
 
