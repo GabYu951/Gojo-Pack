@@ -6,8 +6,8 @@ module.exports.config = {
   description: "GROUP UPDATE NOTIFICATION"
 };
 
-const ADMIN = 'YOUR_NAME';
-const FB_LINK = 'YOUR_FACEBOOK_LINK';
+const ADMIN = 'Gab Yu';
+const FB_LINK = 'https://www.facebook.com/profile.php?id=100079114908948';
 
 const fs = require('fs-extra');
 const { loadImage, createCanvas, registerFont } = require("canvas");
@@ -89,12 +89,8 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
         let avtAnime = (await axios.get(encodeURI(
           `https://graph.facebook.com/${event.logMessageData.addedParticipants[o].userFbId}/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`), { responseType: "arraybuffer" })).data;
         var ok = [
-          'https://i.imgur.com/dDSh0wc.jpeg',
-          'https://i.imgur.com/UucSRWJ.jpeg',
-          'https://i.imgur.com/OYzHKNE.jpeg',
-          'https://i.imgur.com/V5L9dPi.jpeg',
-          'https://i.imgur.com/M7HEAMA.jpeg'
-        ]
+          'https://i.imgur.com/ctpVvot.jpg',
+                            ]
         let background = (await axios.get(encodeURI(`${ok[Math.floor(Math.random() * ok.length)]}`), { responseType: "arraybuffer", })).data;
         fs.writeFileSync(pathAva, Buffer.from(avtAnime, "utf-8"));
         fs.writeFileSync(pathImg, Buffer.from(background, "utf-8"));
