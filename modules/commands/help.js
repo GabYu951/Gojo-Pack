@@ -161,13 +161,8 @@ module.exports.run = async function ({ api, event, args, getText }) {
     const fs = require("fs-extra");
     const imgP = [];
     const img = [
-      "https://i.imgur.com/ruQ2pRn.jpg",
-      "https://i.imgur.com/HXHb0cB.jpg",
-      "https://i.imgur.com/ZJEI6KW.jpg",
-      "https://i.imgur.com/XGL57Wp.jpg",
-      "https://i.imgur.com/6OB00HJ.jpg",
-      "https://i.imgur.com/6vHaRZm.jpg",
-      "https://i.imgur.com/k6uE93k.jpg"
+      "https://i.imgur.com/9ao3PrP.gif",
+      
     ];
     const path = __dirname + "/cache/menu.png";
     const rdimg = img[Math.floor(Math.random() * img.length)];
@@ -180,7 +175,7 @@ module.exports.run = async function ({ api, event, args, getText }) {
     imgP.push(fs.createReadStream(path));
     const config = require("./../../config.json")
     const msgg = {
-  body: `╭──────────────╮\n│𝖢𝗈𝗆𝗆𝖺𝗇𝖽 & 𝖢𝖺𝗍𝖾𝗀𝗈𝗋𝗒│\n╰──────────────╯\n‣ Bot Owner: ${config.DESIGN.Admin}\n\n` + msg + `\n◖Total pages available: ${totalPages}.\n` + `\n╭ ──── ╮\n│ GUIDE │\n╰ ──── ╯\n` + getText("guideList", config.PREFIX),
+  body: `╭──────────────╮\n│𝖢𝗈𝗆𝗆𝖺𝗇𝖽 & 𝖢𝖺𝗍𝖾𝗀𝗈𝗋𝗒│\n╰──────────────╯\n‣ Bot Owner: ${config.DESIGN.Admin}\n\n` + msg + `\n◖Total pages available: ${totalPages}.\n` + `\n╭ ──── ╮\n│ GABYU │\n╰ ──── ╯\n` + getText("guideList", config.PREFIX),
   attachment: imgP,
 };
 
